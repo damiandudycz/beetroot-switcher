@@ -5,6 +5,7 @@ IMAGE_DIR="/home/immolo/Pictures"
 
 while true; do
 	for IMAGE in "$IMAGE_DIR"/*.{jpg,png}; do
+		[ -f $IMAGE ] || continue
 		gsettings set org.mate.background picture-filename "$IMAGE"
 		sleep 60
 	done
