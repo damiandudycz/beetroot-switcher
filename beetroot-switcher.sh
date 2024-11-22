@@ -1,10 +1,11 @@
 #!/bin/sh
 
+# Directory containing the images
+IMAGE_DIR="/home/immolo/Pictures"
+
 while true; do
-	gsettings set org.mate.background picture-filename "/home/immolo/Pictures/1.jpg"
-	sleep 60
-	gsettings set org.mate.background picture-filename "/home/immolo/Pictures/2.jpg"
-	sleep 60
-	gsettings set org.mate.background picture-filename "/home/immolo/Pictures/3.jpg"
-	sleep 60
+	for IMAGE in "$IMAGE_DIR"/*.{jpg,png}; do
+		gsettings set org.mate.background picture-filename "$IMAGE"
+		sleep 60
+	done
 done
