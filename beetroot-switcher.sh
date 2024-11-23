@@ -16,7 +16,7 @@ if [[ ! -d "${WORK_PATH}" ]]; then
 fi
 
 pushd "${XWINWRAP_PATH}"
-./xwinwrap -fs -ni -s -st -sp -b -- firefox --kiosk "https://rezmason.github.io/matrix/?numColumns=120&fallSpeed=0.2&url=https://www.pngarts.com/files/5/Beetroot-Free-PNG-Image.png&effect=image&url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Beets-Bundle.jpg/1024px-Beets-Bundle.jpg"
+./xwinwrap -fs -ni -s -st -sp -b -- firefox --new-window --kiosk "https://rezmason.github.io/matrix/?numColumns=120&fallSpeed=0.2&url=https://www.pngarts.com/files/5/Beetroot-Free-PNG-Image.png&effect=image&url=https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Beets-Bundle.jpg/1024px-Beets-Bundle.jpg"
 popd
 
 #while true; do
